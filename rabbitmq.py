@@ -93,7 +93,7 @@ def callback(ch, method, properties, body):
 
 if __name__ == '__main__':
     try:
-        ser, ret = open_port("COM1", 9600, None)
+        ser, ret = open_port("/dev/ttyUSB0", 9600, None)
         if ret == True:
             open_scoket()
     except EnvironmentError as err:
